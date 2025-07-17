@@ -1,0 +1,25 @@
+TeamAssigner.py
+---------------
+Purpose:
+- Automatically assign each player to one of two teams based on jersey color using KMeans clustering.
+
+Main Methods:
+
+1. get_player_color():
+   - Extracts the upper region of a player's bounding box (typically where the jersey is visible).
+   - Applies KMeans clustering with 2 clusters to segment dominant colors in this region.
+   - Compares these color clusters with the background color (from image corners) and selects the one that differs the most — assumed to be the jersey color.
+
+2. assign_team_color():
+   - Applies get_player_color() for all players in the frame.
+   - Uses KMeans with 2 clusters on all player jersey colors to assign them to two teams.
+   - Stores the KMeans model and the representative color of each team.
+
+3. get_player_team():
+   - Retrieves the jersey color of a new player using get_player_color().
+   - Uses the trained KMeans model to assign the player to a team based on color similarity.
+   - Stores the player_id ↔ team_id mapping in a dictionary for future reference.
+
+Notes:
+- Player with ID 91 is hardcoded to always belong to Team 1.
+- The entire process is based solely on jersey color extraction from the image.

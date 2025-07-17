@@ -1,0 +1,4 @@
+- Every 5 frames -> calculate the "player's displacement distance"
+- calculate the speed in km/h and add up the distance traveled 
+- write to the track dict by id -> draw on the frames
+- Not applicable for "ball" and "referees".

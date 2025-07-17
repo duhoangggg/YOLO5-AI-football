@@ -1,0 +1,5 @@
+Key methods : 
+- __init__: init Optical Flow params  + mask only side areas to avoid tracking players
+- add_adjust_positions_to_tracks: subtract camera movement to correct player positions
+- get_camera_movement: compute movement using Optical Flow, save to .pkl if needed
+- draw_camera_movement: overlay camera movement (X, Y) onto frames for visualization

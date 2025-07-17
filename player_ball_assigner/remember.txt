@@ -1,0 +1,5 @@
+Method : assign_ball_to_palyer(player, ball_bbox)
+- Calculate center of ball
+- Calculate distance from ball to each palyer's feet(bbox)
+- Assign ball to closest player if distance < 70px
+- Return player_id,or - 1 i no one is close enough 
